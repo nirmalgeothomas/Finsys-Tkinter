@@ -97,12 +97,29 @@ l6 = tk.Label(form_frame, text='Default Tax Code', bg='#243e54',
 
 val = ['18.0% IGST', ' 14.00% ST', '0% IGST', 'Out of Scope', '0% GST', '14.5% ST', '14.0% VAT', '6.0% IGST', '28.0% IGST', '15.0% ST', '28.0% GST', '12.0% GST', '18.0% GST',
        '3.0% GST', '0.2% IGST', '5.0% GST', '6.0% GST', '0.2% GST', 'Exempt IGST', '3.0% IGST', '4.0% VAT', '5.0% IGST', '12.36% ST', '5.0% VAT', 'Exempt GST', '12.0% IGST', '2.0% CST']
+
+
+l4 = tk.Label(form_frame, text='Balance', bg='#243e54', font=(
+    'times new roman', 14)).place(relx=0.5, rely=0.78)
+e4 = tk.Entry(form_frame).place(relx=0.5, rely=0.82,
+                                relwidth=0.15, relheight=0.065)
+
+
+l5 = tk.Label(form_frame, text='as of', bg='#243e54', font=(
+    'times new roman', 14)).place(relx=0.7, rely=0.78)
+e5 = tk.Entry(form_frame).place(relx=0.7, rely=0.82,
+                                relwidth=0.15, relheight=0.065)
+
+
 e6 = ttk.Combobox(form_frame, values=val).place(
     relx=0.5, rely=0.7, relwidth=0.4, relheight=0.065)
 
 
 wrappen.pack(fill='both', expand='yes',)
-button = tk.Button(form_frame, text="Submit",)
-button.place(x=490, y=990, width=100)
+button = tk.Button(form_frame, text="Save and Close",)
+button.place(x=250, y=960, width=100)
+
+button1 = tk.Button(form_frame, text="Cancel",)
+button1.place(x=100, y=960, width=100)
 
 account.mainloop()
